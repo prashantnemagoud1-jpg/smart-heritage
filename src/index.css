@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-heritage-gold: #C5A059;
+  --color-heritage-terracotta: #C5A059;
+  --color-heritage-clay: #1A1A1A;
+  --color-heritage-teal: #1B4D4F;
+  --color-heritage-cream: #FAF8F5;
+  --color-dark-charcoal: #121110;
+  --color-dark-surface: #1C1A18;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+  
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--color-heritage-cream);
+    color: #2D241E;
+  }
+}
+
+/* Custom Bento Styling Classes */
+.bento-grid-item {
+  border-radius: 1.5rem; /* rounded-3xl */
+  box-shadow: 0 4px 12px rgba(45, 36, 30, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #EBE3D5;
+  background-color: #FFFFFF;
+}
+
+.dark .bento-grid-item {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--color-dark-surface);
+}
+
+.bento-grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.08);
+}
+
+.dark .bento-grid-item:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom glassmorphism helpers for cultural aesthetics */
+.glass-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #FAF8F5;
+}
+
+.glass-dark {
+  background: rgba(28, 26, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+.glow-terracotta {
+  box-shadow: 0 0 15px rgba(26, 26, 26, 0.15);
+}
+
+/* Custom scrollbar to match cultural clay style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-heritage-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-heritage-clay);
+}

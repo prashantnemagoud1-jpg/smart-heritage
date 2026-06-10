@@ -1,0 +1,10 @@
+{
+  "name": "Smart Tourism & Heritage Tech",
+  "description": "Preserve cultural heritage and enhance tourism through Artificial Intelligence, Virtual Reality, Interactive Maps, and multilingual support.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
